@@ -11,23 +11,26 @@ public class Test {
 
     @Before
     public void setUp() {
-        steps.start();
+        steps.init();
     }
 
-    @Пусть("открыт ресурс авито")
-    public void sgw43() {
+    @Пусть("открыт ресурс sgw43")
+    public void sgw43() throws InterruptedException {
         steps.sgw43();
     }
 
     @И("в поле введено имя пользователя")
     public void writeN() {
+        steps.writeName();
     }
 
     @И("в введен пароль")
     public void writeP() {
+        steps.writePassword();
     }
 
     @Тогда("нажать на кнопку 'Войти'")
     public void comeIn() {
+        steps.comeIn();
     }
 }
